@@ -129,7 +129,7 @@ class Twython(EndpointsMixin, object):
         requests_args = {}
         for k, v in self.client_args.items():
             # Maybe this should be set as a class variable and only done once?
-            if k in ('timeout', 'allow_redirects', 'stream', 'verify'):
+            if k in ('timeout', 'allow_redirects', 'stream', 'verify', 'source_address'):
                 requests_args[k] = v
 
         if method == 'get':
